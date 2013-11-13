@@ -1,5 +1,5 @@
-(defun github-jump ()
-  "Jump to current file in github repository"
+(defun browse-url-of-file-in-github ()
+  "Ask a WWW browser to display current buffer's file in github."
   ;;; XXX always goes to 'master', it should look at the current branch/tag/revision
   (interactive)
   (let* ((filename (file-relative-name (buffer-file-name)
@@ -12,4 +12,4 @@
                   (match-string 1)))))
     (browse-url (format "https://github.com/%s/blob/master/%s" repo filename))))
 
-;;(global-set-key (kbd "C-c g") 'github-jump)
+;;(global-set-key (kbd "C-c g") 'browse-url-of-file-in-github)
