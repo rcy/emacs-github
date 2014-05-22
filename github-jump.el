@@ -13,3 +13,5 @@
     (browse-url (format "https://github.com/%s/blob/master/%s" repo filename))))
 
 ;;(global-set-key (kbd "C-c g") 'browse-url-of-file-in-github)
+
+(provide 'emacs-github)
